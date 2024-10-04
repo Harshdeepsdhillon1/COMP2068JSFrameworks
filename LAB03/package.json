@@ -1,0 +1,22 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "Lab 3 for JavaScript Frameworks, Creating a simple calculator with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshdeepsdhillon1/COMP2068JSFrameworks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harshdeepsdhillon1/COMP2068JSFrameworks/issues"
+  },
+  "homepage": "https://github.com/Harshdeepsdhillon1/COMP2068JSFrameworks#readme",
+  "dependencies": {
+    "connect": "^3.7.0"
+  }
+}
