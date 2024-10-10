@@ -1,0 +1,329 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF; /* Background color is white */
+    color: #000000; /* Default text color is black */
+    scroll-behavior: smooth;
+}
+header{
+    background: linear-gradient(75deg, #D32F2F 0%, #D32F2F 50%, white 50%, white 100%); /* Light gray background for contrast */
+    padding-bottom: 3%;
+}
+
+/* Customize the navbar background */
+.navbar {
+    background-color: #D32F2F;
+    height: 6em;
+}
+
+/* Change the logo and link colors */
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+/* Change hover effect for links */
+.nav-link:hover {
+    color: #FFFFFF !important;
+    font-weight: bolder;
+}
+
+/* Adjust the padding and margin */
+.navbar .container-fluid {
+    padding: 0 20px;
+}
+
+/* Style the active link */
+.nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid #FFFFFF; /* Underline effect */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+
+.hero {
+    display: grid;
+    grid-template-columns:10% 35% 55%;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 40px 40px;   
+}
+.social-media{
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: white; /* Social media links are white */
+    text-decoration: none;
+    padding: 7.5% 0;
+    margin-right: 5%;
+}
+
+.social-media img{
+    height: 45px;
+    width: auto;
+    border-radius: 30px;
+}
+.hero-text {
+    max-width: 100%;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin: 0;
+    color: white; /* Hero section heading is red */
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: white; /* Hero section text is black */
+}
+
+.hero-image img {
+    max-width: 55%;
+    height: auto;
+    border-radius: 0px;
+    margin-left: 25%;
+    border-radius: 50%;
+}
+button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #FFFFFF; /* Button background is white */
+    color: #D32F2F; /* Button text is red */
+    border: none;
+    border-radius: 10px !important; 
+    cursor: pointer;
+    transition: font-weight 0.3s ease; /* Transition added to normal state */
+}
+
+button:hover {
+    font-weight: bolder;
+}
+
+
+#skills {
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+#skills h2{
+    margin-left: 5%;
+    font-weight: 700;
+    font-size: 5vh;
+    color: #D32F2F;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill-category {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    text-align: left;
+    padding: 0%;
+}
+
+.skill-category h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #D32F2F; /* Skill category headings are red */
+    border-bottom: 2px solid transparent; /* Start with no visible border */
+    transition: border-bottom 0.3s ease; /* Add transition to the border-bottom property*/
+    width: 30%;
+    text-align: center;
+}
+.skill-category h3:hover{
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.skill-category li {
+    margin: 5px 0;
+    color: #D32F2F; /* Skill items are black */
+    padding: 2%;
+    width: 50%;
+    text-align: center;
+    height: 20%;
+}
+
+.skill-category li:hover{
+    color: #FFFFFF;
+    background-color: #D32F2F;
+}
+
+#about {
+    padding: 40px 20px;
+    background-color: #D32F2F; /* Light gray background for contrast */
+}
+
+#about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FFFFFF; /* Section heading is red */
+    padding: 1%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+#about .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #FFFFFF; /* Text color is black */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#about h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding: 10px 5px;
+    color: #FFFFFF; /* Subheading is red */
+}
+
+#about p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 10px 0;
+
+}
+#about-details{
+   
+}
+
+#contact {
+    padding: 10%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    color: #D32F2F;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+#contact h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+#contact-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#contact-details .social-media{
+    flex-direction: row;
+    margin-right: 3.5%;
+    
+}
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #D32F2F;
+    width: 100%;
+}
+
+#contact label {
+    margin: 10px 0 5px;
+    color: #D32F2F; /* Contact form labels are black */
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    border: 1px solid #D32F2F; /* Input borders are red */
+    border-radius: 7px;
+}
+
+#contact button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: #D32F2F; /* Button background is red */
+    color: #FFFFFF; /* Button text is white */
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D32F2F; /* Footer background is black */
+    color: #FFFFFF; /* Footer text is white */
+    padding: 10px 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #D32F2F; /* Footer link is red */
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/*Projects.html*/
+#projects {
+    padding: 40px 20px;
+}
+
+#projects h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #D32F2F; /* Section heading is red */
+}
+
+.project {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #D32F2F; /* Border around projects */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.project img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.project-info {
+    max-width: 70%;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    color: #D32F2F; /* Project title is red */
+}
+
+.project-info p, .project-info ul {
+    margin: 5px 0;
+}
