@@ -14,7 +14,7 @@ header{
 
 /* Customize the navbar background */
 .navbar {
-    background-color: #D32F2F;
+    background-color: #000000;
     height: 6em;
 }
 
@@ -70,9 +70,9 @@ header{
 }
 
 .social-media img{
-    height: 45px;
+    height: 40px;
     width: auto;
-    border-radius: 30px;
+    
 }
 .hero-text {
     max-width: 100%;
@@ -117,14 +117,14 @@ button:hover {
     align-items: center;
     text-align: center;
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: #000000;
 }
 
 #skills h2{
-    margin-left: 5%;
-    font-weight: 700;
-    font-size: 5vh;
+    font-weight: bold;
+    font-size: 8vh;
     color: #D32F2F;
+    margin-top: 4%;
 }
 
 .skills-container {
@@ -132,6 +132,7 @@ button:hover {
     flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 4%;
 }
 
 .skill-category {
@@ -140,19 +141,23 @@ button:hover {
     margin: 10px;
     text-align: left;
     padding: 0%;
+    background-color: #FFFFFF;
+    border-radius: 10px;
 }
 
 .skill-category h3 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     margin-bottom: 10px;
     color: #D32F2F; /* Skill category headings are red */
-    border-bottom: 2px solid transparent; /* Start with no visible border */
+    border-bottom: 1px solid transparent; /* Start with no visible border */
     transition: border-bottom 0.3s ease; /* Add transition to the border-bottom property*/
-    width: 30%;
-    text-align: center;
+    width: 45%;
+    text-align: left;
+    padding-top: 10px;
+    margin-left: 20px;
 }
 .skill-category h3:hover{
-    border-bottom: 2px solid #FFFFFF;
+    border-bottom: 3px solid #D32F2F;
 }
 
 .skill-category ul {
@@ -167,12 +172,20 @@ button:hover {
     padding: 2%;
     width: 50%;
     text-align: center;
-    height: 20%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3vh;
 }
 
 .skill-category li:hover{
     color: #FFFFFF;
     background-color: #D32F2F;
+}
+.skill-category li img{
+    height: 50px;
+    width: 50px;
 }
 
 #about {
