@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #FFFFFF; /* Background color is white */
+    background-color: #F2F2F2; /* Background color is white */
     color: #000000; /* Default text color is black */
     scroll-behavior: smooth;
 }
 header{
-    background: linear-gradient(75deg, #D32F2F 0%, #D32F2F 50%, white 50%, white 100%); /* Light gray background for contrast */
+    background: linear-gradient(90deg, #000000 0%, #000000 50%, white 50%, white 100%); /* Light gray background for contrast */
     padding-bottom: 3%;
 }
 
@@ -25,8 +25,9 @@ header{
 
 /* Change hover effect for links */
 .nav-link:hover {
-    color: #FFFFFF !important;
+    color: #5CB8E4 !important;
     font-weight: bolder;
+    border-bottom: 2px solid #5CB8E4; /* Underline effect */
 }
 
 /* Adjust the padding and margin */
@@ -37,7 +38,7 @@ header{
 /* Style the active link */
 .nav-link.active {
     font-weight: bold;
-    border-bottom: 2px solid #FFFFFF; /* Underline effect */
+    border-bottom: 2px solid #F2F2F2; /* Underline effect */
 }
 
 .logo {
@@ -99,8 +100,8 @@ header{
 button {
     padding: 10px;
     font-size: 1em;
-    background-color: #FFFFFF; /* Button background is white */
-    color: #D32F2F; /* Button text is red */
+    background-color: #F2F2F2; /* Button background is white */
+    color: #8758FF; /* Button text is red */
     border: none;
     border-radius: 10px !important; 
     cursor: pointer;
@@ -109,21 +110,23 @@ button {
 
 button:hover {
     font-weight: bolder;
+    color: #5CB8E4;
 }
 
 
 #skills {
-    padding: 20px;
+    padding: 5px;
     align-items: center;
     text-align: center;
-    height: 100%;
+    height: 50%;
     background-color: #000000;
+
 }
 
 #skills h2{
     font-weight: bold;
     font-size: 8vh;
-    color: #D32F2F;
+    color: #F2F2F2;
     margin-top: 4%;
 }
 
@@ -141,14 +144,18 @@ button:hover {
     margin: 10px;
     text-align: left;
     padding: 0%;
-    background-color: #FFFFFF;
+    background-color: #F2F2F2;
     border-radius: 10px;
+    transition: border 0.3s ;
+}
+.skill-category:hover{
+    border: 5px solid #5CB8E4;
 }
 
 .skill-category h3 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #D32F2F; /* Skill category headings are red */
+    color: #5CB8E4; /* Skill category headings are red */
     border-bottom: 1px solid transparent; /* Start with no visible border */
     transition: border-bottom 0.3s ease; /* Add transition to the border-bottom property*/
     width: 45%;
@@ -157,7 +164,9 @@ button:hover {
     margin-left: 20px;
 }
 .skill-category h3:hover{
-    border-bottom: 3px solid #D32F2F;
+    border-bottom: 3px solid #8758FF;
+    color: #8758FF;
+    cursor: pointer;
 }
 
 .skill-category ul {
@@ -168,7 +177,7 @@ button:hover {
 
 .skill-category li {
     margin: 5px 0;
-    color: #D32F2F; /* Skill items are black */
+    color: #5CB8E4; /* Skill items are black */
     padding: 2%;
     width: 50%;
     text-align: center;
@@ -177,26 +186,27 @@ button:hover {
     flex-direction: column;
     align-items: center;
     font-size: 3vh;
+    transition: background-color 0.3s;
 }
 
 .skill-category li:hover{
-    color: #FFFFFF;
-    background-color: #D32F2F;
+    color: #F2F2F2;
+    background-color: #8758FF;
 }
 .skill-category li img{
     height: 50px;
     width: 50px;
 }
 
-#about {
+/*#about {
     padding: 40px 20px;
-    background-color: #D32F2F; /* Light gray background for contrast */
+    background-color: #8758FF; /* Light gray background for contrast /
 }
 
 #about h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #FFFFFF; /* Section heading is red */
+    color: #F2F2F2; /* Section heading is red /
     padding: 1%;
     margin-left: 5%;
     text-align: center;
@@ -205,7 +215,7 @@ button:hover {
 #about .about-content {
     max-width: 800px;
     margin: 0 auto;
-    color: #FFFFFF; /* Text color is black */
+    color: #F2F2F2; /* Text color is black /
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -215,7 +225,7 @@ button:hover {
     font-size: 1.5em;
     margin-top: 20px;
     padding: 10px 5px;
-    color: #FFFFFF; /* Subheading is red */
+    color: #F2F2F2; /* Subheading is red /
 }
 
 #about p {
@@ -224,17 +234,19 @@ button:hover {
     margin: 10px 0;
 
 }
-#about-details{
+/*#about-details{
    
-}
+}*/
 
 #contact {
-    padding: 10%;
+    padding: 2%;
     display: grid;
-    grid-template-columns: 40% 60%;
-    color: #D32F2F;
-    background-color: #FFFFFF;
+    grid-template-columns: 50% 50%;
+    color: #8758FF;
+    background-color: #F2F2F2;
     align-items: center;
+    height: 90%;
+    width: 100%;
 }
 #contact h2{
     text-align: center;
@@ -246,49 +258,63 @@ button:hover {
     flex-direction: column;
     align-items: center;
 }
-#contact-details .social-media{
+#contact .social-media{
     flex-direction: row;
-    margin-right: 3.5%;
+    width: 60%;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
     
+}
+.social-media img{
+    height: 7vh;
+    margin-right: 20px;
+}
+#contact > div:nth-child(2){
+    background-color: #000000;
+    height: 107.78%;
+    width: auto;
+    text-align: center;
+    padding: 15%;
+    align-items: center;
 }
 #contact form {
     display: flex;
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    color: #D32F2F;
+    color: #8758FF;
     width: 100%;
 }
 
 #contact label {
     margin: 10px 0 5px;
-    color: #D32F2F; /* Contact form labels are black */
+    color: #8758FF; /* Contact form labels are black */
 }
 
 #contact input, #contact textarea {
     padding: 10px;
     font-size: 1em;
     margin-bottom: 10px;
-    border: 1px solid #D32F2F; /* Input borders are red */
+    border: 1px solid #8758FF; /* Input borders are red */
     border-radius: 7px;
 }
 
 #contact button {
     padding: 10px;
     font-size: 1em;
-    background-color: #D32F2F; /* Button background is red */
-    color: #FFFFFF; /* Button text is white */
+    background-color: #8758FF; /* Button background is red */
+    color: #F2F2F2; /* Button text is white */
     border: none;
     border-radius: 7px;
     cursor: pointer;
 }
-
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #D32F2F; /* Footer background is black */
-    color: #FFFFFF; /* Footer text is white */
+    background-color: #000000; /* Footer background is black */
+    color: #F2F2F2; /* Footer text is white */
     padding: 10px 20px;
 }
 
@@ -297,28 +323,51 @@ footer p {
 }
 
 footer a {
-    color: #D32F2F; /* Footer link is red */
+    color: #8758FF; /* Footer link is red */
     text-decoration: none;
     font-size: 1em;
 }
 
 /*Projects.html*/
 #projects {
-    padding: 40px 20px;
+    padding: 30px 20px;
+    height: 110%;
+}
+.projects-header{
+    background: #F2F2F2;
+}
+.projects-head{
+    background-image: url(../images/graphic-design.png);
+    height:100%;
 }
 
 #projects h2 {
-    font-size: 2em;
+    font-size: 4em;
     margin-bottom: 20px;
-    color: #D32F2F; /* Section heading is red */
+    font-weight: bolder ;
+    color: #8758FF; /* Section heading is red */
+}
+
+#projects > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+    gap: 60px; /* Space between grid items */
 }
 
 .project {
-    display: flex;
-    margin-bottom: 20px;
-    border: 1px solid #D32F2F; /* Border around projects */
-    padding: 10px;
+    border: 1px solid #8758FF; /* Border around projects */
+    padding: 30px;
     border-radius: 10px;
+    transition: border 0.3s;
+    display: flex; /* Flex inside each project for image and text alignment */
+    flex-direction: row;
+    background-color: #000000;
+    color: #F2F2F2;
+}
+
+.project:hover {
+    border: 4px solid #8758FF;
+    box-shadow: 0 0 10px #5CB8E4; /* Fixing the box-shadow */
 }
 
 .project img {
@@ -329,14 +378,68 @@ footer a {
 }
 
 .project-info {
-    max-width: 70%;
+    max-width: 100%; /* Ensure the project info fills remaining space */
 }
 
 .project-info h3 {
     margin-top: 0;
-    color: #D32F2F; /* Project title is red */
+    color: #8758FF; /* Project title is purple */
 }
 
 .project-info p, .project-info ul {
     margin: 5px 0;
 }
+
+.btn{
+    background-color: #8758FF;
+    color: #F2F2F2;
+}
+.btn:hover{
+    background-color: #000000;
+    color: #5CB8E4;
+}
+#about {
+    background-color: #000000;
+    padding: 100px;
+}
+
+#about > .container {
+    background-color: #F2F2F2;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+#about .row {
+    display: flex;
+    align-items: center; /* Vertically center content */
+}
+
+#about .col-md-4, #about .col-md-8 {
+    flex: 1; /* Make sure both take up equal width */
+}
+
+#about .col-md-4 {
+    display: flex;
+    justify-content: center; /* Center the profile image */
+}
+
+#about img {
+    width: 100%;
+    max-width: 300px; /* Limit the size of the image */
+    border-radius: 50%;
+}
+
+#about .col-md-8 {
+    padding-left: 40px; /* Space between image and content */
+}
+
+#about .col-md-8::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: #8758FF; /* Color of the line */
+}
+

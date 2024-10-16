@@ -63,7 +63,7 @@
     </section>
 
         <!-- About Section -->
-        <section id="about">
+        <!--<section id="about">
             <h2>About Me</h2>
             <div class="about-content">
                 <div id="about-details">
@@ -93,13 +93,50 @@
     
     <!-- Contact Form Section -->
     <section id="contact">
-        <div id="contact-details">
-            <h2>CONTACT</h2>
-            <div class="social-media">
-                <a href="https://github.com/yourusername" target="_blank"><img src="../public/images/GitHubLogoBlack.png"></a>
-                <a href="https://www.linkedin.com/in/yourusername/" target="_blank"><img src="../public/images/linkedinLogoBlack.png"></a>
-                <a href="mailto:your-email@example.com"><img src="../public/images/MailLogoBlack.png"></a>
+       <div class="container mt-5">
+        <h2 class="text-center mb-4">Contact Me</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">What's your name?</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
             </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="interest" class="form-label">I'm interested in</label>
+                <select class="form-select" id="interest" required>
+                    <option selected disabled value="">Select an option</option>
+                    <option value="webDevelopment">Web Development</option>
+                    <option value="mobileDevelopment">Mobile Development</option>
+                    <option value="uiDesign">UI/UX Design</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Your message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        </div>
+        <div>  
+            <h2>Let's Connect.</h2>
+            <p>Whether you have a project on mind, have a question or simply want to connect. Send me a message!</p>        
+            <div class="social-media">
+                <a href="https://github.com/yourusername" target="_blank"><img src="../public/images/GithubLogoWhite.png"></a>
+                <a href="https://www.linkedin.com/in/yourusername/" target="_blank"><img src="../public/images/LinkedInLogoWhite.png"></a>
+                <a href="mailto:your-email@example.com"><img src="../public/images/MailLogoWhite.png"></a>
+            </div>
+        </div>
+    </div>
+    
+    
+        <!--<div id="contact-details">
+            <h2>CONTACT</h2>
+            
         </div>
         
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
@@ -109,6 +146,7 @@
             <textarea id="message" name="message" required></textarea>
             <button type="submit">Send</button>
         </form>
+        -->
     </section>
 
     <!-- Footer -->
