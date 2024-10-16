@@ -1,14 +1,17 @@
+h1, h2, h3, h4, p, a, li{
+    font-family: "Work Sans", sans-serif;
+}
 body {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F2F2F2; /* Background color is white */
+    background-color: #F2F2F2; /* Background color is #F2F2F2 */
     color: #000000; /* Default text color is black */
     scroll-behavior: smooth;
 }
 header{
-    background: linear-gradient(90deg, #000000 0%, #000000 50%, white 50%, white 100%); /* Light gray background for contrast */
+    background: linear-gradient(90deg, #000000 0%, #000000 50%, #F2F2F2 50%, #F2F2F2 100%); /* Light gray background for contrast */
     padding-bottom: 3%;
 }
 
@@ -20,7 +23,7 @@ header{
 
 /* Change the logo and link colors */
 .navbar-brand, .nav-link {
-    color: white !important;
+    color: #F2F2F2 !important;
 }
 
 /* Change hover effect for links */
@@ -44,7 +47,7 @@ header{
 .logo {
     font-size: 1.5em;
     font-weight: bold;
-    color: white;
+    color: #F2F2F2;
 }
 
 
@@ -64,7 +67,7 @@ header{
 
 .social-media a {
     margin: 0 10px;
-    color: white; /* Social media links are white */
+    color: #F2F2F2; /* Social media links are #F2F2F2 */
     text-decoration: none;
     padding: 7.5% 0;
     margin-right: 5%;
@@ -82,26 +85,32 @@ header{
 .hero-text h1 {
     font-size: 3.5em;
     margin: 0;
-    color: white; /* Hero section heading is red */
+    color: #F2F2F2; /* Hero section heading is red */
 }
 
 .hero-text p {
     font-size: 1.2em;
-    color: white; /* Hero section text is black */
+    color: #F2F2F2; /* Hero section text is black */
 }
 
 .hero-image img {
     max-width: 55%;
     height: auto;
-    border-radius: 0px;
-    margin-left: 25%;
     border-radius: 50%;
+    margin-left: 25%;
+    background-color: lightgray;
+    transition: background-color 0.3s;
 }
+.hero-image img:hover{
+    background-color: darkgray;
+    box-shadow: 0 0 5px #000000;
+}
+
 button {
     padding: 10px;
     font-size: 1em;
-    background-color: #F2F2F2; /* Button background is white */
-    color: #8758FF; /* Button text is red */
+    background-color: #8758FF; /* Button background is #F2F2F2 */
+    color: #F2F2F2; /* Button text is red */
     border: none;
     border-radius: 10px !important; 
     cursor: pointer;
@@ -110,7 +119,8 @@ button {
 
 button:hover {
     font-weight: bolder;
-    color: #5CB8E4;
+    background-color: #5CB8E4;
+    box-shadow: 0 0 10px #5CB8E4;
 }
 
 
@@ -150,12 +160,13 @@ button:hover {
 }
 .skill-category:hover{
     border: 5px solid #5CB8E4;
+    box-shadow: 0 0 20px #5CB8E4;
 }
 
 .skill-category h3 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #5CB8E4; /* Skill category headings are red */
+    color: #8758FF; /* Skill category headings are red */
     border-bottom: 1px solid transparent; /* Start with no visible border */
     transition: border-bottom 0.3s ease; /* Add transition to the border-bottom property*/
     width: 45%;
@@ -164,8 +175,8 @@ button:hover {
     margin-left: 20px;
 }
 .skill-category h3:hover{
-    border-bottom: 3px solid #8758FF;
-    color: #8758FF;
+    border-bottom: 3px solid #5CB8E4;
+    color: #5CB8E4;
     cursor: pointer;
 }
 
@@ -177,7 +188,7 @@ button:hover {
 
 .skill-category li {
     margin: 5px 0;
-    color: #5CB8E4; /* Skill items are black */
+    color: #8758FF; /* Skill items are black */
     padding: 2%;
     width: 50%;
     text-align: center;
@@ -186,57 +197,18 @@ button:hover {
     flex-direction: column;
     align-items: center;
     font-size: 3vh;
-    transition: background-color 0.3s;
+    transition: color 0.3s;
 }
 
 .skill-category li:hover{
-    color: #F2F2F2;
-    background-color: #8758FF;
+    color: #5CB8E4;
+    /*background-color: #5CB8E4;
+    box-shadow: 0 0 10px #5CB8E4;*/
 }
 .skill-category li img{
     height: 50px;
     width: 50px;
 }
-
-/*#about {
-    padding: 40px 20px;
-    background-color: #8758FF; /* Light gray background for contrast /
-}
-
-#about h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #F2F2F2; /* Section heading is red /
-    padding: 1%;
-    margin-left: 5%;
-    text-align: center;
-}
-
-#about .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    color: #F2F2F2; /* Text color is black /
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-#about h3 {
-    font-size: 1.5em;
-    margin-top: 20px;
-    padding: 10px 5px;
-    color: #F2F2F2; /* Subheading is red /
-}
-
-#about p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin: 10px 0;
-
-}
-/*#about-details{
-   
-}*/
 
 #contact {
     padding: 2%;
@@ -304,18 +276,24 @@ button:hover {
     padding: 10px;
     font-size: 1em;
     background-color: #8758FF; /* Button background is red */
-    color: #F2F2F2; /* Button text is white */
+    color: #F2F2F2; /* Button text is #F2F2F2 */
     border: none;
     border-radius: 7px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+#contact button:hover{
+    background-color: #5CB8E4;
+    box-shadow: 0 0 4px #5CB8E4;
 }
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #000000; /* Footer background is black */
-    color: #F2F2F2; /* Footer text is white */
+    color: #F2F2F2; /* Footer text is #F2F2F2 */
     padding: 10px 20px;
+    margin: 0;
 }
 
 footer p {
@@ -350,31 +328,35 @@ footer a {
 
 #projects > .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
-    gap: 60px; /* Space between grid items */
+    grid-template-columns: repeat(1, 1fr); /* 3 equal columns */
+    gap: 20px; /* Space between grid items */
 }
 
 .project {
     border: 1px solid #8758FF; /* Border around projects */
-    padding: 30px;
+    padding: 25px;
     border-radius: 10px;
     transition: border 0.3s;
     display: flex; /* Flex inside each project for image and text alignment */
     flex-direction: row;
+    justify-content: center;
     background-color: #000000;
     color: #F2F2F2;
 }
 
 .project:hover {
-    border: 4px solid #8758FF;
+    border: 4px solid #5CB8E4;
     box-shadow: 0 0 10px #5CB8E4; /* Fixing the box-shadow */
 }
 
 .project img {
-    width: 150px;
+    width: 280px;
     height: auto;
     margin-right: 20px;
     border-radius: 10px;
+}
+.project img:hover{
+    filter: brightness(0.8);
 }
 
 .project-info {
@@ -395,12 +377,24 @@ footer a {
     color: #F2F2F2;
 }
 .btn:hover{
-    background-color: #000000;
-    color: #5CB8E4;
+    background-color: #5CB8E4;
+    color: #F2F2F2;
+    box-shadow: 0 0 4px #5CB8E4;
 }
 #about {
     background-color: #000000;
     padding: 100px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    
+}
+#about h2, #about h3, #about h4{
+    color: #8758FF;
+    transition: border-bottom 0.3s;
+}
+#about h3:hover, #about h4:hover{
+    border-bottom: solid 2px #8758FF;
 }
 
 #about > .container {
@@ -426,7 +420,12 @@ footer a {
 #about img {
     width: 100%;
     max-width: 300px; /* Limit the size of the image */
-    border-radius: 50%;
+    border-radius: 10px;
+    transition: border 0.3s;
+}
+#about img:hover{
+    border: solid 5px #5CB8E4;
+    box-shadow:0 0 5px #5CB8E4;
 }
 
 #about .col-md-8 {
@@ -441,5 +440,8 @@ footer a {
     height: 100%;
     width: 2px;
     background-color: #8758FF; /* Color of the line */
+}
+strong{
+    color: #8758FF;
 }
 
