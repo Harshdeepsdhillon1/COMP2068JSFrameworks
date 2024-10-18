@@ -371,14 +371,15 @@ footer a img{
     }
     
     .hero-image img{
-        max-width: 160px;
+        max-width: 150px;
     } 
     .hero h1{
         font-size: 5vw;
     }
     .hero p{
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
+    
     .social-media img{
         height: 28px;
         width: 90%;        
