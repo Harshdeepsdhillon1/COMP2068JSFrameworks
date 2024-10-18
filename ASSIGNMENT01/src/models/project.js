@@ -1,12 +1,15 @@
 const mongoose = require("mongoose");
+
 // Define Schema object
 const SchemaObj = {
-    name: {type: String, required: true},
-    email: {type: String, required: true},
-    interest: {type: String, default: 'TO DO'},
-    message: {type: String, default: 'TO DO'},
-}
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    interest: { type: String, required: true },
+    message: { type: String, required: true },
+};
+
 // Create mongoose schema
-const mongooseSchema = new mongoose.Schema(SchemaObj);
+const project = new mongoose.Schema(SchemaObj);
+
 // Create and export mongoose model
-module.exports = mongoose.model("contactusdata", mongooseSchema);
+module.exports = mongoose.model("contactusdata", project); // Use contactusdata here

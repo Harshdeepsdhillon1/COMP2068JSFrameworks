@@ -6,11 +6,11 @@ const createError = require('http-errors');
 const app = express();
 const port = process.env.PORT || 3000; 
 const config = require('./database/config');
-const Project = require('./models/project'); // Import your Project model
+const ContactUsData = require('./models/project'); // Import your model here (changed to match the export)
+mongoose.set('strictQuery', false);
 
 // Middleware to parse URL-encoded data
 app.use(express.urlencoded({ extended: true }));
-
 
 // Set the path for views and partials
 const viewsPath = path.join(__dirname, '../views'); 
@@ -59,16 +59,16 @@ mongoose.connect(config.ConnectionStrings.MongoDB)
     app.post("/projects", (req, res) => {
         const { name, email, interest, message } = req.body;
 
-        const newProject = new Project({
+        const newContact = new ContactUsData({ // Use the imported model
             name,
             email,
             interest,
             message,
         });
 
-        newProject.save()
+        newContact.save()
             .then(() => {
-                res.redirect("/projects");
+                res.redirect("/"); // Redirect to the projects page
             })
             .catch((err) => {
                 console.error("Error saving project:", err);
