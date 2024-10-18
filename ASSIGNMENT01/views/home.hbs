@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/styles/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
@@ -74,32 +74,33 @@
     <section id="contact">
        <div class="container mt-5">
         <h2 class="text-center mb-4">Contact Me</h2>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">What's your name?</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Your Email📨</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-            </div>
-            <div class="mb-3">
-                <label for="interest" class="form-label">I'm interested in💻</label>
-                <select class="form-select" id="interest" required>
-                    <option selected disabled value="">Select an option</option>
-                    <option value="webDevelopment">Web Development</option>
-                    <option value="mobileDevelopment">Mobile Development</option>
-                    <option value="uiDesign">UI/UX Design</option>
-                    <option value="backEndDevelopment">Backend Development</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Your message📩</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message" required></textarea>
-            </div>
+            <form action="/projects" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">What's your name?</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email📨</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="interest" class="form-label">I'm interested in💻</label>
+                    <select class="form-select" id="interest" name="interest" required>
+                        <option selected disabled value="">Select an option</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Mobile Development">Mobile Development</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Backend Development">Backend Development</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your message📩</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+                </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
         </div>
         <div>  
             <h2>Let's Connect.🤝</h2>

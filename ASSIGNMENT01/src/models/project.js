@@ -9,4 +9,4 @@ const SchemaObj = {
 // Create mongoose schema
 const mongooseSchema = new mongoose.Schema(SchemaObj);
 // Create and export mongoose model
-module.exports = mongoose.model("Project", mongooseSchema);
+module.exports = mongoose.model("contactusdata", mongooseSchema);
