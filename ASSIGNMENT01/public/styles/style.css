@@ -288,6 +288,7 @@ button:hover {
 #contact label {
     margin: 10px 0 5px;
     color: #8758FF; /* Contact form labels are black */
+    font-size: 2vw;
 }
 
 #contact input, #contact textarea {
@@ -296,6 +297,9 @@ button:hover {
     margin-bottom: 10px;
     border: 1px solid #8758FF; /* Input borders are red */
     border-radius: 7px;
+}
+#contact p{
+    font-size: 2vw;
 }
 
 #contact button {
@@ -307,10 +311,12 @@ button:hover {
     border-radius: 7px;
     cursor: pointer;
     transition: background-color 0.3s;
+    
 }
 #contact button:hover{
     background-color: #5CB8E4;
     box-shadow: 0 0 4px #5CB8E4;
+    
 }
 footer {
     position: relative; /* Needed for the line placement */
@@ -371,16 +377,16 @@ footer a img{
         height: 28px;
         width: 85%;        
     }
-    
+    #skills h2{
+        font-size: 8vw;
+    }
     .skill-category ul{
         grid-template-columns: 50% 50%;
     }
     .skill-category li{
-        font-size: 2.7vh;
+        font-size: 3vh;
     }
-    .skill-category h2{
-        font-size: 5vw;
-    }
+
     .skill-category h3{
         font-size: 5vw;
     }
@@ -388,7 +394,10 @@ footer a img{
         grid-template-columns: 100%;
     }
     #contact h2{
-        font-size: 5vw;
+        font-size: 8vw;
+    }
+    #contact p{
+        font-size: 4vw;
     }
     
 }
@@ -491,7 +500,7 @@ footer a img{
     transition: border 0.3s;
 }
 #about h2{
-    font-size: 5vw;
+    font-size: 6vw;
 }
 #about h3{
     font-size: 3.5vw;
@@ -500,7 +509,7 @@ footer a img{
     font-size: 2.6vw;
 }
 #about p{
-    font-size: 1.8vw;
+    font-size: 1.5vw;
 }
 
 #about h2, #about h3, #about h4 {
