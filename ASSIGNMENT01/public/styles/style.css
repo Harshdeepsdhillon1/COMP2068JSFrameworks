@@ -363,6 +363,9 @@ footer a img{
     width: auto;
 }
 @media screen and (max-width: 768px){
+    .home-header{
+        height: 100%;
+    }
     
     .hero{
         padding-top: 100px;
