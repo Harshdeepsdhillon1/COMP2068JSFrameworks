@@ -371,11 +371,17 @@ footer a img{
     }
     
     .hero-image img{
-        max-width: 150px;
+        max-width: 160px;
     } 
+    .hero h1{
+        font-size: 5vw;
+    }
+    .hero p{
+        font-size: 3vw;
+    }
     .social-media img{
         height: 28px;
-        width: 85%;        
+        width: 90%;        
     }
     #skills h2{
         font-size: 8vw;
@@ -393,11 +399,17 @@ footer a img{
     #contact{
         grid-template-columns: 100%;
     }
+    #contact label{
+        font-size: 4vw;
+    }
     #contact h2{
         font-size: 8vw;
     }
     #contact p{
         font-size: 4vw;
+    }
+    button a{
+        font-size: 2.5vw;
     }
     
 }
