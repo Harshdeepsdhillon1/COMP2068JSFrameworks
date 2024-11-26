@@ -10,6 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/styles/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <body>
     <!-- Include Navbar -->
@@ -19,60 +21,157 @@
     <!-- Projects Section -->
     <section id="projects">
     <div class="container">
-        <h2 class="text-center my-5">MY PROJECTS</h2>
+        <h2 class="text-center my-5" data-aos="zoom">MY PROJECTS</h2>
 
-        <!-- Project Template -->
-        <div class="project row mb-4">
-            <div class="col-md-4">
-                <img src="/public/images/snake game.png" alt="Snake Game" class="img-fluid">
+        <!-- Web Development Projects -->
+        <h3 class="project-category" data-aos="zoom-out">Web Development Projects</h3>
+        <div class="project-grid">
+            <!-- Example of Web Development Projects -->
+            <div class="project-card" data-aos="fade-right">
+                <img src="/public/images/lamborghini_website.png" alt="Retro Lamborghini Website">
+                <div class="project-info">
+                    <h4>Retro Lamborghini Website</h4>
+                    <p>Designed a retro-styled product website using HTML, CSS, and JavaScript.</p>
+                    <a href="https://harshdeepsdhillon1.github.io/RetroLamborghini/" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
             </div>
-            <div class="col-md-8 project-info">
-                <h3>SNAKE GAME</h3>
-                <p>Developed a Snake Game using the Turtle module in Python. The project applies Object-Oriented Programming concepts.</p>
-                <ul>
-                    <li>Python</li>
-                    <li>Object-Oriented Programming</li>
-                    <li>Turtle Graphics</li>
-                </ul>
-                <a href="https://github.com/harshdeepsdhillon1/snakegame" target="_blank" class="btn btn-primary">View on GitHub</a>
+
+            <div class="project-card" data-aos="fade-up">
+                <img src="/public/images/WeatherApp.png" alt="Web Weather App">
+                <div class="project-info">
+                    <h4>WEB WEATHER APP</h4>
+                    <p>Built a weather application using JavaScript and Weather API for real-time updates.</p>
+                    <a href="https://github.com/Harshdeepsdhillon1/Web-Weather-App" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
             </div>
-        </div>
-        <div class="project row mb-4">
-            <div class="col-md-4">
-                <img src="/public/images/lamborghini_website.png" alt="Snake Game" class="img-fluid">
+
+            <div class="project-card" data-aos="fade-left">
+                <img src="/public/images/nike_website.png" alt="Nike Website">
+                <div class="project-info">
+                    <h4>NIKE WEBSITE DESIGN</h4>
+                    <p>Created a responsive Nike-themed e-commerce website using HTML, CSS, and JavaScript.</p>
+                    <a href="https://harshdeepsdhillon1.github.io/nikewebsite/" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
             </div>
-            <div class="col-md-8 project-info">
-                <h3>RETRO PRODUCT WEBSITE: LAMBORGHINI</h3>
-                <p>Developed a Snake Game using the Turtle module in Python. The project applies Object-Oriented Programming concepts.</p>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JAVASCRIPT</li>
-                </ul>
-                <a href="https://github.com/harshdeepsdhillon1/snakegame" target="_blank" class="btn btn-primary">View on GitHub</a>
+
+            <div class="project-card" data-aos="fade-right">
+                <img src="/public/images/TodoApp.png" alt="Web Todo App">
+                <div class="project-info">
+                    <h4>WEB TODO APP</h4>
+                    <p>Node.js-based application with HTML and CSS, deployed on Render.</p>
+                    <a href="https://todoapp-u8h6.onrender.com/home" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up">
+                <img src="/public/images/clientportfolio.png" alt="Web Todo App">
+                <div class="project-info">
+                    <h4>PORTFOLIO WEBSITE</h4>
+                    <p>Website designed and coded with HTML, CSS and JavaScript, deployed on Github.</p>
+                    <a href="https://rajveerrsingh.github.io/portfolio/" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-left">
+                <img src="/public/images/spidermanMovie.png" alt="Web Todo App">
+                <div class="project-info">
+                    <h4>SPIDERMAN POSTER</h4>
+                    <p>Spiderman-3 poster was made using core HTML and CSS. </p>
+                    <a href="https://github.com/Harshdeepsdhillon1/SpiderMan3Poster" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
             </div>
         </div>
 
-        <!-- Repeat similar blocks for other projects -->
-        <!-- Example: JAVA BANKING APPLICATION -->
-        <div class="project row mb-4">
-            <div class="col-md-4">
-                <img src="/public/images/java_banking.png" alt="Java Banking Application" class="img-fluid">
+        <!-- Back-End Projects -->
+        <h3 class="project-category" data-aos="zoom-out">Back-End Projects</h3>
+        <div class="project-grid">
+
+            <div class="project-card" data-aos="fade-right">
+                <img src="/public/images/java_banking.png" alt="Java Banking Application">
+                <div class="project-info">
+                    <h4>JAVA BANKING APP</h4>
+                    <p>A banking app developed using Java, MySQL, and Scene Builder for the GUI.</p>
+                    <a href="https://github.com/harshdeepsdhillon1/javabankingApp" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
             </div>
-            <div class="col-md-8 project-info">
-                <h3>JAVA BANKING APPLICATION</h3>
-                <p>A banking application built with Java, using MySQL for database management. The GUI was developed using Scene Builder.</p>
-                <ul>
-                    <li>Java</li>
-                    <li>Object-Oriented Programming</li>
-                    <li>MySQL</li>
-                </ul>
-                <a href="https://github.com/harshdeepsdhillon1/javabankingApp" target="_blank" class="btn btn-primary">View on GitHub</a>
+
+            
+
+            <div class="project-card" data-aos="fade-up">
+                <img src="/public/images/snake game.png" alt="Web Todo App">
+                <div class="project-info">
+                    <h4>SNAKE GAME</h4>
+                    <p>Snake Game coded in python using turtle graphics and pandas library to track real time user score.</p>
+                    <a href="https://todoapp-u8h6.onrender.com/home" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
             </div>
+
+            <div class="project-card" data-aos="fade-left">
+                <img src="/public/images/turtle_race.png" alt="Web Todo App">
+                <div class="project-info">
+                    <h4>TURTLE RACING GAME</h4>
+                    <p>Turtle Racing Game coded in python using turtle graphics and tests the concepts of OOP.</p>
+                    <a href="https://github.com/Harshdeepsdhillon1/" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-card" data-aos="fade-right">
+                <img src="/public/images/github_Auth.png" alt="Web Todo App">
+                <div class="project-info">
+                    <h4>GITHUB AUTHENTICATION</h4>
+                    <p>GitHub Authentication was added to Online E commerce project using .NET Framework and OAuth.</p>
+                    <a href="https://github.com/Harshdeepsdhillon1/.NET-Projects/tree/main/Lab%203" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up">
+                <img src="/public/images/MoiveSearchApp.png" alt="Web Todo App">
+                <div class="project-info">
+                    <h4>MOVIE SEARCH APP</h4>
+                    <p>Movie Search app was Developed using Java in Android Studio. OMDB API was used to get the data. </p>
+                    <a href="https://github.com/Harshdeepsdhillon1/movieSearchApp" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-left">
+                <img src="/public/images/GitHubLogoBlack.png" alt="Java Banking Application">
+                <div class="project-info">
+                    <h4>E Commerce Shoe Store Concept</h4>
+                    <p>An E Commerce Shoe store Project was developed using Java and testes the concepts of OOP.</p>
+                    <a href="https://github.com/harshdeepsdhillon1/javabankingApp" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
+            </div>
+
         </div>
-        
     </div>
 </section>
+
+<!-- Certifications Section -->
+<section id="certifications">
+    <div class="container">
+        <h2 class="text-center my-5" data-aos="zoom">CERTIFICATIONS</h2>
+        <div class="certifications-grid">
+            <div class="certification-card" data-aos="fade-right">
+                <h4>Microsoft Azure Cloud Practitioner</h4>
+                <p>Microsoft Certification</p>
+                <a href="https://certificate-link.com" target="_blank" class="btn btn-primary">Learn More</a>
+            </div>
+
+            <div class="certification-card" data-aos="fade-up">
+                <h4>Learning Jira for Beginners</h4>
+                <p>LinkedIn Learning</p>
+                <a href="https://certificate-link.com" target="_blank" class="btn btn-primary">Learn More</a>
+            </div>
+
+            <div class="certification-card" data-aos="fade-left">
+                <h4>Azure DevOps</h4>
+                <p>Microsoft Certification</p>
+                <a href="https://certificate-link.com" target="_blank" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
@@ -81,5 +180,6 @@
         <a href="../public/resume.pdf" download>RESUME</a>
     </footer>
     <script src="/js/bootstrap.min.js"></script>
+    <script type="module" src="/public/js/main.js" defer></script>
 </body>
 </html>

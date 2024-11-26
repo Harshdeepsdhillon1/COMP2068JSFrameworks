@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/public/styles/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 </head>
 <body>
     <header class="home-header">
@@ -16,7 +19,8 @@
     </header>
     <section class="hero">
     <div class="hero-content">
-        <div class="social-media">
+        <!--Social Media Links-->
+        <div class="social-media" data-aos="fade-right">
             <a href="https://github.com/harshdeepsdhillon1" target="_blank">
                 <img src="../public/images/GithubLogoWhite.png" alt="GitHub">
             </a>
@@ -27,15 +31,16 @@
                 <img src="../public/images/MailLogoWhite.png" alt="Email">
             </a>
         </div>
-        <div class="hero-text">
-            <h1>Hi, This is Harshdeep Singh 👋</h1>
+        <!--Main Heading-->
+        <div class="hero-text" data-aos="fade-up">
+            <h1>Hi, This is Harshdeep Singh</h1>
             <p>Passionate about Coding, Committed to Growth</p>
             <button id="CV">
                 <a href="/public/resume.pdf" download>Download CV</a>
             </button>
         </div>
     </div>
-    <div class="hero-image">
+    <div class="hero-image" data-aos="fade-down">
         <img src="../public/images/head_image.png" alt="Harshdeep Singh">
     </div>
 </section>
@@ -45,7 +50,7 @@
     <h2>Skills</h2>
     <div class="skills-container">
         <!-- Front End Design -->
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-right">
             <h3>Front End Design 🎨</h3>
             <ul>
                 <li><img src="/public/images/htmlLogo.png" alt="HTML Logo">HTML</li>
@@ -63,7 +68,7 @@
             </ul>
         </div>
         <!-- Back End Engineering -->
-        <div class="skill-category">
+        <div class="skill-category" data-aos="fade-left">
             <h3>Back End Engineering ⚙️</h3>
             <ul>
                 <li><img src="/public/images/javaLogo.png" alt="Java Logo">Java</li>
@@ -84,7 +89,7 @@
 </section>
 
 <section id="contact">
-    <div class="container mt-5">
+    <div class="container mt-5" data-aos="zoom-in">
         <!-- Contact Form Section -->
         <div id="contact-form">
             <h2>Contact Me</h2>
@@ -120,7 +125,7 @@
      <div id="contact-details">
             <h2>Let's Connect 🤝</h2>
             <p>Whether you have a project in mind, a question, or simply want to connect, send me a message!</p>
-            <div class="social-media">
+            <div class="social-media" data-aos="fade-right">
                 <a href="https://github.com/harshdeepsdhillon1" target="_blank"><img src="../public/images/GithubLogoWhite.png" alt="GitHub Logo"></a>
                 <a href="https://www.linkedin.com/in/harshdeep-singh-dhillon-b29603256/" target="_blank"><img src="../public/images/LinkedInLogoWhite.png" alt="LinkedIn Logo"></a>
                 <a href="mailto:harshdeepsdhillon1@gmail.com"><img src="../public/images/MailLogoWhite.png" alt="Email Logo"></a>
@@ -137,5 +142,10 @@
         <a href="../public/resume.pdf" download>RESUME</a>
     </footer>
     <script src="/js/bootstrap.min.js"></script>
+    <!-- Include AOS library directly from CDN -->
+
+
+    <script type="module" src="/public/js/main.js" defer></script>
+
 </body>
 </html>

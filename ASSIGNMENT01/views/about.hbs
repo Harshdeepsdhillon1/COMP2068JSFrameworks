@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/styles/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <body>
     <header class="about-header">
@@ -16,29 +18,29 @@
     </header>
     <section id="about" class="my-5">
     <div class="container">
-        <h2 class="text-center mb-4">A Bit About Me...</h2>
+        <h2 class="text-center mb-4" data-aos="fade-down">A Bit About Me...</h2>
         <div class="row">
             <!-- Profile Image -->
-            <div class="col-md-6 profile-image">
+            <div class="col-md-6 profile-image" data-aos="fade-right">
                 <img src="/public/images/back_image.jpg" alt="Harshdeep Picture" class="img-fluid">
             </div>
             <!-- About Content -->
             <div class="col-md-6 about-content">
-                <h3>Harshdeep Singh Dhillon</h3>
+                <h3 data-aos="zoom-out">Harshdeep Singh Dhillon</h3>
                 <p>
-                    I am currently pursuing a <strong>Computer Programming</strong> diploma at Georgian College, 
+                    I am currently pursuing a <strong><a href="https://cat.georgiancollege.ca/programs/cmpa/">Computer Programming</a></strong> diploma at Georgian College, 
                     aiming to become a front-end developer initially and eventually grow into a full-stack developer. 
                     I have a passion for creating intuitive, efficient software solutions that provide great user experiences.
                 </p>
-                <h4>Interests</h4>
+                <h4 data-aos="zoom">Interests</h4>
                 <p>
                     I love going to the gym, eating healthy, and traveling. These activities help me maintain balance, energy, 
                     and a positive outlook while working towards my professional goals.
                 </p>
-                <h4>Work Experience</h4>
+                <h4 data-aos="zoom">Work Experience</h4>
                 <p>
-                    I work as a Sales Lead at <strong>Famous Footwear</strong> and have previously worked in the same position 
-                    at <strong>Aldo Group</strong>. My retail experience has strengthened my customer service skills and my understanding 
+                    I work as a Sales Lead at <strong><a href="https://www.caleres.com/">Famous Footwear</a></strong> and have previously worked in the same position 
+                    at <strong><a href="https://www.aldoshoes.com/ca/en">Aldo Group</a></strong>. My retail experience has strengthened my customer service skills and my understanding 
                     of user needs, both of which are essential in software development.
                 </p>
             </div>
@@ -55,5 +57,6 @@
         <a href="../public/resume.pdf" download>RESUME</a>
     </footer>
     <script src="/js/bootstrap.min.js"></script>  
+    <script type="module" src="/public/js/main.js" defer></script>
 </body>
 </html>

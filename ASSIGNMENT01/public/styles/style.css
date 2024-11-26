@@ -12,7 +12,7 @@ body {
     scroll-behavior: smooth;
 }
 .home-header{
-    background-color: #000000;
+    background-color: #FFFFFF;
     padding-bottom: 0%;
 }
 
@@ -76,13 +76,14 @@ body {
 
 
 
+
 /* Hero Section */
 .hero {
     display: flex;
     width: 100%;
     height: 90vh;
     background-color: #000; /* Black background for contrast */
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 /* Content Section */
@@ -113,7 +114,7 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     color: #F2F2F2;
     margin-bottom: 10px;
 }
@@ -127,6 +128,7 @@ body {
 button {
     padding: 10px 20px;
     background-color: #8758FF;
+    color: #FFFFFF;
     border: none;
     border-radius: 8px!important;
     cursor: pointer;
@@ -170,7 +172,9 @@ button a {
 
 /* Skills Section */
 #skills {
-    padding: 40px 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
     text-align: center;
     background-color: #F2F2F2;
     height: 100vh;
@@ -198,7 +202,7 @@ button a {
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 3px solid #8758FF;
+    border: none;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -277,7 +281,9 @@ button a {
     align-items: center;
     background-color: #F2F2F2;
     color: #8758FF;
-    padding: 40px 30px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
     align-items: center;
     display: grid;
     grid-template-columns: 1fr;
@@ -439,20 +445,16 @@ footer a img{
     .hero {
         flex-direction: column; /* Stack content vertically */
         align-items: center;
-        padding-top: 80px;
+        padding-top: 40px;
         background-color: #000000;
+        height: 110vh;
     }
 
     .hero-content {
-        width: 90%; /* Adjust width for smaller screens */
+        width: 100%; /* Adjust width for smaller screens */
         text-align: center; /* Center align text */
         padding: 20px 10px;
-        justify-content: left;
-        align-items: left;
-    }
-
-    .hero h1 {
-        font-size: 5vw;
+        
     }
 
     .hero p {
@@ -533,84 +535,98 @@ footer a img{
     
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
-    .hero{
-        grid-template-columns:10% 35% 55%;
-        margin-right: 10px;
+    .hero {
+        align-items: center;
+        padding-top: 20px;
+        justify-content: center;
+    }
+
+    .hero-content {
+        flex-direction: row;
+        width: 100%; /* Adjust width for smaller screens */
+        text-align: center; /* Center align text */
+        justify-content: space-evenly;
+        align-items: center;        
     }
     .hero-image img{
-        max-width: 225px;
+        max-width: 250px;
     }
+    .hero-text {
+        padding-right: 5px;
+    }
+
+}
+/*Projects Page*/
+
+/* General Section Styling */
+#projects, #certifications {
+    padding: 40px 20px;
+    background-color: #F2F2F2;
 }
 
-/*Projects.html*/
-#projects {
-    padding: 50px 20px;
-    background-color: #F9F9F9;
-}
-
-#projects h2 {
+#projects h2, #certifications h2 {
     font-size: 3rem;
     font-weight: bold;
     color: #8758FF;
     margin-bottom: 40px;
+    
+    
+}
+#projects h3{
+    text-align: center;
+    font-size: 2rem;
 }
 
-.project {
-    display: flex;
-    flex-wrap: wrap;
-    border: 2px solid #8758FF;
-    border-radius: 10px;
+/* Project Grid Styling */
+.project-category {
+    font-size: 2rem;
+    color: #8758FF;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.project-grid, .certifications-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+
+/* Project Card Styling */
+.project-card, .certification-card {
     background-color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
     padding: 20px;
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project:hover {
-    transform: scale(1.02);
+.project-card:hover, .certification-card:hover {
+    transform: scale(1.03);
     box-shadow: 0 8px 20px rgba(135, 88, 255, 0.2);
 }
 
-.project img {
-    width: 100%;
-    max-width: 250px;
+.project-card img {
+    height: 43%;
+    width: 80%;
     border-radius: 10px;
-    margin-bottom: 20px;
-    transition: filter 0.3s;
-}
-
-.project img:hover {
-    filter: brightness(0.9);
-}
-
-.project-info {
-    flex: 1;
-    padding-left: 20px;
-}
-
-.project-info h3 {
-    font-size: 1.8rem;
-    color: #8758FF;
     margin-bottom: 15px;
 }
 
-.project-info p {
-    font-size: 1.2rem;
-    color: #555555;
+.project-info h4, .certification-card h4 {
+    font-size: 1.5rem;
+    color: #8758FF;
     margin-bottom: 10px;
 }
 
-.project-info ul {
-    list-style-type: square;
-    padding-left: 20px;
+.project-info p, .certification-card p {
     font-size: 1rem;
-    margin-bottom: 20px;
+    color: #555555;
+    margin-bottom: 15px;
 }
 
-.project-info ul li {
-    margin-bottom: 5px;
-}
-
-.project-info .btn {
+.btn-primary {
     background-color: #8758FF;
     color: #FFFFFF;
     padding: 10px 20px;
@@ -619,10 +635,21 @@ footer a img{
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.project-info .btn:hover {
+.btn-primary:hover {
     background-color: #6E46E5;
     box-shadow: 0 4px 10px rgba(135, 88, 255, 0.3);
 }
+#certifications{
+    padding: 20px;
+}
+#certifications h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #8758FF;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
 
 
 
@@ -660,6 +687,11 @@ footer a img{
     font-size: 1.2rem;
     line-height: 1.6;
 }
+#about p a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
 
 /* Container Styling */
 #about .container {
@@ -667,7 +699,7 @@ footer a img{
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 4px solid #8758FF;
+    border: none;
     transition: 0.5s ease;
 }
 #about .container:hover {
@@ -718,7 +750,7 @@ strong {
     color: #8758FF;
 }
 
-/* Responsive Design */
+/* Responsive Design for about and project page */
 @media screen and (max-width: 768px) {
     #about .row {
         flex-direction: column;
@@ -758,27 +790,14 @@ strong {
         text-align: center;
     }
 
-    .project img {
-        max-width: 100%;
-        margin-bottom: 20px;
+    .project-grid, .certifications-grid{
+        grid-template-columns: 1fr;
     }
 
-    .project-info {
-        padding-left: 0;
-    }
-
-    .project-info h3 {
-        font-size: 1.5rem;
-    }
-
-    .project-info p, .project-info ul {
-        font-size: 1rem;
-    }
-
-
-    .project p, .project ul{
-        text-align: left;
-        font-size: 3vw;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
