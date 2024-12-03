@@ -3,9 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const hbs = require('hbs');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var wishlistRouter = require('./routes/wishlist');
 
 // Import Mongoose and Configurations Obj
 var mongoose = require("mongoose");
@@ -18,9 +20,17 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.engine('hbs', require('hbs').__express);
+//Add Partials
 require('hbs').registerPartials(__dirname + '/views/partials');
 
+//format date
+hbs.registerHelper('formatDate', function (date) {
+  return new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+});
 
+hbs.registerHelper('not', function (value) {
+  return !value;
+});
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -29,6 +39,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/wishlist', wishlistRouter);
+
+
+
 
 //Connect to MongoDB
 mongoose.connect(configs.ConnectionString.MongoDB)
