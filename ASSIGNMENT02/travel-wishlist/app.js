@@ -7,11 +7,19 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// Import Mongoose and Configurations Obj
+var mongoose = require("mongoose");
+var configs = require('./config/globals');
+const { error } = require('console');
+
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+app.engine('hbs', require('hbs').__express);
+require('hbs').registerPartials(__dirname + '/views/partials');
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -21,6 +29,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+//Connect to MongoDB
+mongoose.connect(configs.ConnectionString.MongoDB)
+    .then(()=>{
+      console.log("Connected to MongoDB");
+    })
+    .catch(() =>{
+      console.log("Error Connecting to MongoDB", error);
+    })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
