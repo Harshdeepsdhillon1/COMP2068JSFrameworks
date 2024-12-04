@@ -24,12 +24,25 @@ app.engine('hbs', require('hbs').__express);
 require('hbs').registerPartials(__dirname + '/views/partials');
 
 //format date
-hbs.registerHelper('formatDate', function (date) {
-  return new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+// Sub-Expressions https://handlebarsjs.com/guide/builtin-helpers.html#sub-expressions
+// function name and helper function with parameters
+hbs.registerHelper("createOptionElement", (currentValue, selectedValue) => {
+  console.log(currentValue + " " + selectedValue);
+  // initialize selected property
+  var selectedProperty = "";
+  // if values are equal set selectedProperty accordingly
+  if (currentValue == selectedValue.toString()) {
+    selectedProperty = "selected";
+  }
+  // return html code for this option element
+  // return new hbs.SafeString('<option '+ selectedProperty +'>' + currentValue + '</option>');
+  return new hbs.SafeString(
+    `<option ${selectedProperty}>${currentValue}</option>`
+  );
 });
-
-hbs.registerHelper('not', function (value) {
-  return !value;
+// helper function to format date values
+hbs.registerHelper('toShortDate', (longDateValue) => {
+  return new hbs.SafeString(longDateValue.toLocaleDateString('en-CA'));
 });
 app.use(logger('dev'));
 app.use(express.json());

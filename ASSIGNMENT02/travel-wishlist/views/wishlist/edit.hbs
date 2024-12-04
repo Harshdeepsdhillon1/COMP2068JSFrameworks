@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+
+<div class="card">
+  <div class="card-header">
+    <h4>Edit Destination</h4>
+  </div>
+  <div class="card-body">
+    <form method="POST">
+      <!-- Destination Field -->
+      <div class="mb-3">
+        <label for="destination" class="form-label">Destination:</label>
+        <input type="text" class="form-control" name="destination" id="destination" value="{{wishlist.destination}}" required />
+      </div>
+
+      <!-- Date Field -->
+      <div class="mb-3">
+        <label for="date" class="form-label">Date:</label>
+        <input type="date" class="form-control" name="date" id="date" value="{{wishlist.date}}" required />
+      </div>
+
+      <!-- Story Field -->
+      <div class="mb-3">
+        <label for="story" class="form-label">Story:</label>
+        <textarea class="form-control" name="story" id="story" required>{{wishlist.story}}</textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>

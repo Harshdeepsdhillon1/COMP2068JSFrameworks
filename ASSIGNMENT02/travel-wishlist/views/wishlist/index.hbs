@@ -18,9 +18,9 @@
 
           <!-- UPDATE and DELETE buttons -->
           <a href="/wishlist/edit/{{this._id}}" class="btn btn-warning">Edit</a>
-          <form action="/wishlist/delete/{{this._id}}" method="POST" style="display:inline;">
-            <button type="submit" class="btn btn-danger">Delete</button>
-          </form>
+          <a href="/projects/delete/{{this._id}}"
+                    onclick="return confirmDeletion()"
+                    class="btn btn-danger">Delete</a>
         </div>
       </div>
     </div>
