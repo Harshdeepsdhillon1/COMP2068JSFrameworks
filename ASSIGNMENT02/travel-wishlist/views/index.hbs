@@ -44,32 +44,4 @@
 </div>
 
 <!-- Wishlist Section -->
-<div class="container mt-5">
-  <h2 class="text-center mb-4">My Travel Wishlist</h2>
-  <div class="row">
-    {{#each wishlist}}
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <img src="{{image}}" class="card-img-top" alt="{{destination}}">
-        <div class="card-body">
-          <h5 class="card-title">{{destination}}</h5>
-          <p class="card-text">
-            <small class="text-muted">{{formatDate date}}</small>
-          </p>
-          <p class="card-text">{{story}}</p>
-        </div>
-        <div class="card-footer d-flex justify-content-between align-items-center">
-          <form action="/wishlist/edit/{{_id}}" method="POST">
-            <button type="submit" class="btn btn-sm btn-outline-primary">
-              {{#if status}}✔️ Done{{else}}✅ To Do{{/if}}
-            </button>
-          </form>
-          <form action="/wishlist/delete/{{_id}}" method="POST">
-            <button type="submit" class="btn btn-sm btn-danger">🗑️ Delete</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-</div>
+<!---->

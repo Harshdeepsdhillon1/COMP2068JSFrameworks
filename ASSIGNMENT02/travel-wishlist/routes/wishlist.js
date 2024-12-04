@@ -1,66 +1,44 @@
-const express = require('express');
+// Naming convention > controllers/routers are plural
+// Import express and create router object
+const express = require("express");
 const router = express.Router();
-const Wishlist = require('../models/wishlist'); // Import Wishlist model
-
-// Display all destinations (Read)
-router.get('/wishlist', async (req, res) => {
-  try {
-    // Fetch all wishlist items for the logged-in user
-    const wishlist = await Wishlist.find({ user: req.user._id }); // Assuming user authentication
-    res.render('wishlist', { wishlist, title: 'My Travel Wishlist' });
-  } catch (err) {
-    console.error(err);
-    res.redirect('/');
-  }
+// Import mongoose model to be used
+const Wishlist = require("../models/wishlistModel");
+// Configure GET/POST handlers
+// Path relative to the one configured in app.js > /projects
+// GET /projects/
+router.get("/", async (req, res, next) => {
+    // retrieve ALL data, and sort by dueDate
+    let wishlist = await Wishlist.find().sort({ date: 1 });
+    // render view
+    res.render("wishlist/index", { 
+        title: "WISHLIST",
+        dataset: wishlist
+    })
+});
+// GET /projects/add
+router.get('/add', (req, res, next) => {
+    res.render('wishlist/add', { title: 'Add a New Destination' });
 });
 
-// Add a new destination (Create)
-router.post('/wishlist/add', async (req, res) => {
-  const { destination, date, story, image } = req.body;
-  const newWishlistItem = new Wishlist({
-    destination,
-    date,
-    story,
-    image,
-    user: req.user._id, // Add the logged-in user
+router.post('/add', async (req, res, next) => {
+  // Create a new wishlist item based on the schema
+  let newWishlist = new Wishlist({
+      destination: req.body.destination, // Matches the "destination" field in your schema
+      date: req.body.date,              // Matches the "date" field in your schema
+      story: req.body.story,            // Matches the "story" field in your schema
+      //image: req.body.image,            // Matches the "image" field in your schema
+      status: false                     // Default status as "To-Do" (optional, already defaults to false)
+      // Removed user field since you’re not using authentication here
   });
 
   try {
-    await newWishlistItem.save();
-    res.redirect('/wishlist');
+      await newWishlist.save();  // Save the new wishlist item to the database
+      res.redirect('/wishlist'); // Redirect to the wishlist page after saving
   } catch (err) {
-    console.error(err);
-    res.redirect('/wishlist');
+      console.error(err);       // Log any errors
+      res.redirect('/wishlist'); // Redirect even if there's an error (consider better error handling)
   }
 });
-
-// Update the To-Do status (Update)
-router.post('/wishlist/edit/:id', async (req, res) => {
-  try {
-    const wishlistItem = await Wishlist.findById(req.params.id);
-    if (wishlistItem.user.equals(req.user._id)) { // Ensure only owner can update
-      wishlistItem.status = !wishlistItem.status;
-      await wishlistItem.save();
-    }
-    res.redirect('/wishlist');
-  } catch (err) {
-    console.error(err);
-    res.redirect('/wishlist');
-  }
-});
-
-// Delete a destination (Delete)
-router.post('/wishlist/delete/:id', async (req, res) => {
-  try {
-    const wishlistItem = await Wishlist.findById(req.params.id);
-    if (wishlistItem.user.equals(req.user._id)) { // Ensure only owner can delete
-      await Wishlist.deleteOne({ _id: req.params.id });
-    }
-    res.redirect('/wishlist');
-  } catch (err) {
-    console.error(err);
-    res.redirect('/wishlist');
-  }
-});
-
+// Export router object
 module.exports = router;

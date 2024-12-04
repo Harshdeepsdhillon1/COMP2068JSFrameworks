@@ -1,0 +1,59 @@
+<h1>{{title}}</h1>
+
+<!-- CREATE Button -->
+<a href="/wishlist/add" class="btn btn-primary mb-3">Add a new destination</a>
+
+<!-- CRUD Functionality - Display Wishlist Items -->
+<div class="row">
+  {{!-- Loop through each wishlist item and display in a card layout --}}
+  {{#each dataset}}
+    <div class="col-md-4 mb-3">
+      <div class="card" style="width: 100%;">
+        <!--<img src="/uploads/{{this.image}}" class="card-img-top" alt="Image of {{this.destination}}">-->
+        <div class="card-body">
+          <h5 class="card-title">{{this.destination}}</h5>
+          <p class="card-text"><strong>Story:</strong> {{this.story}}</p>
+          <p class="card-text"><strong>Date:</strong> {{this.date}}</p>
+          <p class="card-text"><strong>Status:</strong> {{#if this.status}}Completed{{else}}To-Do{{/if}}</p>
+
+          <!-- UPDATE and DELETE buttons -->
+          <a href="/wishlist/edit/{{this._id}}" class="btn btn-warning">Edit</a>
+          <form action="/wishlist/delete/{{this._id}}" method="POST" style="display:inline;">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">My Travel Wishlist</h2>
+  <div class="row">
+    {{#each wishlist}}
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <img src="{{image}}" class="card-img-top" alt="{{destination}}">
+        <div class="card-body">
+          <h5 class="card-title">{{destination}}</h5>
+          <p class="card-text">
+            <small class="text-muted">{{formatDate date}}</small>
+          </p>
+          <p class="card-text">{{story}}</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center">
+          <form action="/wishlist/edit/{{_id}}" method="POST">
+            <button type="submit" class="btn btn-sm btn-outline-primary">
+              {{#if status}}✔️ Done{{else}}✅ To Do{{/if}}
+            </button>
+          </form>
+          <form action="/wishlist/delete/{{_id}}" method="POST">
+            <button type="submit" class="btn btn-sm btn-danger">🗑️ Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

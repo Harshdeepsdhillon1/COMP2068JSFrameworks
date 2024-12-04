@@ -17,15 +17,15 @@ const WishlistSchema = new mongoose.Schema({
     type: Boolean,
     default: false, // Initially marked as To-Do
   },
-  image: {
+  /*image: {
     type: String, // Store the URL or path of the uploaded image
     required: true, // Set to true if you want the image to be mandatory
-  },
-  user: {
+  },*/
+  /*user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true,
-  },
+  },*/
 });
 
 module.exports = mongoose.model('Wishlist', WishlistSchema);
