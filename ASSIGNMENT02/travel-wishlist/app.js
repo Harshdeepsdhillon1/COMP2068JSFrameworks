@@ -8,9 +8,13 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var wishlistRouter = require('./routes/wishlist');
+
+
 //Authentication and Passport
 var passport = require('passport');
 var session = require('express-session');
+var User = require('./models/userModel');
+
 // Import Mongoose and Configurations Obj
 var mongoose = require("mongoose");
 var configs = require('./config/globals');
@@ -61,6 +65,10 @@ app.use(session(
 ));
 app.use(passport.initialize());
 app.use(passport.session());
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
