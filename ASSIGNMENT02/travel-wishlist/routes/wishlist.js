@@ -86,13 +86,17 @@ router.post('/edit/:id', async (req, res, next) => {
     res.redirect('/wishlist'); // Redirect on error
   }
 });
-// GET /wishlist/delete/:id
-// access parameters via req.params object
 router.get("/delete/:_id", async (req, res, next) => {
-  let wishlistId = req.params._id;
-  await Project.findByIdAndRemove({ _id: wishlistId });
-  res.redirect("/wishlist");
+  try {
+    let wishlistId = req.params._id;
+    await Wishlist.findByIdAndDelete(wishlistId); // Correct method for Mongoose v6+
+    res.redirect("/wishlist");
+  } catch (err) {
+    console.error(err);
+    res.redirect("/wishlist"); // Redirect with basic error handling
+  }
 });
+
 
 // Export router object
 module.exports = router;

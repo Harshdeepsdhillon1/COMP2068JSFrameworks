@@ -1,8 +1,97 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   color: #00B7FF;
+}
+
+/* Primary Background: #FFF1E6 */
+body, .card-header, .btn-primary {
+  background-color: #FFF1E6 !important;
+  color: #031716 !important;
+}
+.navbar{
+  background-color: #0C969C!important;
+}
+.navbar li a,.navbar .navbar-brand{
+  color: #FFF1E6!important;
+}
+
+/* Secondary Color: #0C969C */
+.btn-primary {
+  background-color: #0C969C !important;
+  color: #FFF1E6!important;
+  border-color: #0C969C !important;
+}
+
+a.btn-outline-secondary {
+  color: #0C969C !important;
+  border-color: #0C969C !important;
+}
+
+/* Hover Effect: Darker Secondary Color #0A7075 */
+.btn-primary:hover,
+a.btn-outline-secondary:hover {
+  background-color: #0A7075 !important;
+  border-color: #0A7075 !important;
+}
+
+/* Text and Card Body: Last Color #031716 */
+.card-body, .navbar-brand, .nav-link, h1, h2, h5, p, label, .form-label, .card-title {
+  color: #031716 !important;
+}
+
+/* Footer Customization */
+footer {
+  background-color: #0C969C !important;
+  color: #FFF1E6 !important;
+}
+
+/* Navbar Customization */
+.navbar-light .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.navbar-light .nav-link {
+  color: #FFF1E6 !important;
+}
+
+.navbar-light .nav-link:hover {
+  color: #0A7075 !important;
+}
+
+/* Button for Danger and Warning */
+.btn-danger {
+  background-color: #B22222 !important; /* Custom red tone */
+}
+
+.btn-warning {
+  background-color: #FFC107 !important;
+  color: #031716 !important;
+}
+
+/* Form Fields */
+.form-control {
+  background-color: #FFF1E6 !important;
+  color: #031716 !important;
+  border: 1px solid #0C969C !important;
+}
+
+/* Wishlist Cards */
+.card {
+  background-color: #FFF1E6 !important;
+  border-color: #0C969C !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: 0.3s;
+}
+
+/* Custom Hover Effect for Wishlist Cards */
+.card:hover {
+  border-color: #0A7075 !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+  
 }

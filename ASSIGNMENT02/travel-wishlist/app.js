@@ -3,12 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const hbs = require('hbs');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var wishlistRouter = require('./routes/wishlist');
-
+//Authentication and Passport
+var passport = require('passport');
+var session = require('express-session');
 // Import Mongoose and Configurations Obj
 var mongoose = require("mongoose");
 var configs = require('./config/globals');
@@ -26,6 +28,7 @@ require('hbs').registerPartials(__dirname + '/views/partials');
 //format date
 // Sub-Expressions https://handlebarsjs.com/guide/builtin-helpers.html#sub-expressions
 // function name and helper function with parameters
+const hbs = require('hbs');
 hbs.registerHelper("createOptionElement", (currentValue, selectedValue) => {
   console.log(currentValue + " " + selectedValue);
   // initialize selected property
@@ -49,6 +52,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session(
+  {
+    secret: "TravelWishlistApp", //used to sign in session id cookie
+    resave: false,
+    saveUninitialized: false,
+  }
+));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -83,3 +95,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+//todo delete and authentication
