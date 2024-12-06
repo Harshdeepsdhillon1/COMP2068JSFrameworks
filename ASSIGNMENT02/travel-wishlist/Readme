@@ -1,0 +1,70 @@
+Travel Wishlist Application
+A Node.js-based web application that allows users to register, log in, and create a wishlist of travel destinations. The application features user authentication with passport and stores data in a MongoDB database.
+
+Features
+User Authentication: Register and log in using secure password hashing with passport-local-mongoose.
+Wishlist Management: Add, view, and manage travel destinations in your wishlist.
+Responsive Design: User-friendly interface with templates built using Handlebars (hbs).
+Technologies Used
+Backend: Node.js, Express.js
+Database: MongoDB, Mongoose
+Authentication: Passport.js
+Templating: Handlebars (hbs)
+Installation
+Follow these steps to set up and run the project locally:
+
+1. Clone the Repository
+bash
+Copy code
+git clone https://github.com/yourusername/travel-wishlist.git
+cd travel-wishlist
+2. Install Dependencies
+Install the required Node.js packages:
+npm install
+3. Install MongoDB
+Ensure you have MongoDB installed. You can download it from MongoDB's official website or install it via package managers:
+
+
+Required Dependencies
+This project uses the following key dependencies:
+
+Package	Command to Install
+Express.js	
+npm install express
+Mongoose	
+npm install mongoose
+Passport.js
+npm install passport passport-local
+Passport-local-mongoose	
+npm install passport-local-mongoose
+Session Management	
+npm install express-session
+Handlebars (HBS)	
+npm install hbs
+Project Structure
+
+Copy code
+├── models/
+│   └── userModel.js        # User schema and Passport configuration
+├── routes/
+│   ├── index.js            # Main application routes
+│   ├── users.js            # User authentication routes
+│   └── wishlist.js         # Wishlist management routes
+├── views/
+│   ├── partials/           # Reusable UI components
+│   ├── login.hbs           # Login page
+│   ├── register.hbs        # Registration page
+│   └── wishlist.hbs        # Wishlist page
+├── public/                 # Static files (CSS, images, etc.)
+├── app.js                  # Main application entry point
+├── package.json            # Project metadata and dependencies
+└── README.md               # Project documentation
+Contributing
+Contributions are welcome! Feel free to fork the repository and submit pull requests.
+
+License
+This project is licensed under the MIT License.
+
+Contact
+If you have questions or suggestions, feel free to contact me at harshdeepsdhillon1@gmail.com.
+
