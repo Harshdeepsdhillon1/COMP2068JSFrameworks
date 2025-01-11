@@ -257,6 +257,7 @@ button a {
 
 .skill-category li:hover {
     color: #5CB8E4;
+    cursor:default;
 }
 
 .skill-category li img {
@@ -268,6 +269,7 @@ button a {
 
 .skill-category li img:hover {
     transform: scale(1.2);
+    cursor:default;
 }
 
 .skill-category li span {
@@ -696,28 +698,37 @@ footer a img{
 /* Container Styling */
 #about .container {
     background-color: #FFFFFF;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: none;
     transition: 0.5s ease;
 }
-#about .container:hover {
+/*#about .container:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Row Styling */
+/* General Row Styling */
 #about .row {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     position: relative;
+}
+
+/* Column Styling */
+#about .column-1,
+#about .column-2 {
+    flex: 1;
+    max-width: 50%;
+    box-sizing: border-box;
 }
 
 /* Profile Image */
 #about .profile-image img {
-    width: 100%;
-    max-width: 450px;
+    width: 60%;
+    max-width: 100%;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -727,23 +738,21 @@ footer a img{
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* About Content */
-#about .about-content {
-    padding-left: 40px;
+/* Full-Width Image */
+#about .horizontal-img{
+    padding: 50px;
+}
+#about .horizontal-img > img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Vertical Divider */
-#about .row::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background-color: #8758FF;
-    z-index: -1;
+#about .horizontal-img img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Strong Text */
 strong {
@@ -752,24 +761,32 @@ strong {
 
 /* Responsive Design for about and project page */
 @media screen and (max-width: 768px) {
-    #about .row {
+    #about .container{
+        display: flex;
         flex-direction: column;
     }
-
-    #about .row::before {
-        display: none; /* Remove divider on small screens */
+    #about .row {
+        flex-direction: column;
+        align-items: center;
     }
 
+    #about .row:nth-child(3){
+        flex-direction: column-reverse;
+    }
+
+    #about .profile-image{
+        padding-top: 10px;
+    }
     #about .profile-image img {
-        max-width: 80%;
-        margin-bottom: 20px;
+        width: 100%;
     }
 
-    #about .about-content {
-        padding-left: 0;
+    #about .about-content { 
         text-align: center;
     }
-
+    #about .horizontal-img{
+        width: 100%;
+    }
     #about h2 {
         font-size: 2rem;
     }
