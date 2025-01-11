@@ -1,5 +1,5 @@
 h1, h2, h3, h4, p, a, li{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat",sans-serif;
 }
 h1, h2, h3, h4, p, a, li:hover{
     cursor: default;
@@ -186,7 +186,7 @@ button a {
     padding-right: 30px;
     padding-left: 30px;
     text-align: center;
-    background-color: #F2F2F2;
+    background-color: #000000;
     height: 100vh;
 }
 
@@ -209,7 +209,7 @@ button a {
     flex: 1 1 300px;
     padding: 20px;
     text-align: center;
-    background-color: #FFFFFF;
+    background-color: #000000;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: none;
@@ -265,10 +265,7 @@ button a {
     transition: color 0.3s;
 }
 
-.skill-category li:hover {
-    color: #5CB8E4;
-    cursor:default;
-}
+
 
 .skill-category li img {
     height: 40px;
@@ -291,7 +288,7 @@ button a {
 /* Contact Section */
 #contact {
     align-items: center;
-    background-color: #F2F2F2;
+    background-color: #000000;
     color: #8758FF;
     padding-bottom: 40px;
     padding-left: 30px;
@@ -667,7 +664,7 @@ footer a img{
 /*About Page*/
 /* About Section */
 #about {
-    background-color: #F2F2F2;
+    background-color: #000000;
     padding-bottom: 40px;
     padding-top: 120px;  
 }
@@ -697,6 +694,7 @@ footer a img{
 #about p {
     font-size: 1.2rem;
     line-height: 1.6;
+    color: #F2F2F2;
 }
 #about p a{
     text-decoration: none;
@@ -706,7 +704,7 @@ footer a img{
 
 /* Container Styling */
 #about .container {
-    background-color: #FFFFFF;
+    background-color: #000000;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -724,6 +722,7 @@ footer a img{
     flex-wrap: wrap;
     gap: 10px;
     position: relative;
+    background-color: #000;
 }
 
 /* Column Styling */
