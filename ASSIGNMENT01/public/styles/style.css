@@ -10,54 +10,48 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #F2F2F2; /* Background color is #F2F2F2 */
+    background-color: #000000; /* Background color is #F2F2F2 */
     color: #000000; /* Default text color is black */
     scroll-behavior: smooth;
 }
-header{
-    background-color: #FFFFFF;
-    z-index: 1;
-    position: fixed;
-    width: 100vw;
-
+header {
+    width: 100%;
+    background-color: #000000;
 }
-
 
 /* Navbar customization */
 .navbar {
-    background-color: #000000!important;
+    background-color: #000000 !important;
     height: 5em;
-    position: fixed;
-    z-index: 100;
-    width: 100vw;
+    position: fixed !important;
+    top: 0;
+    z-index: 1000; /* Ensure navbar is on top */
+    width: 100%; /* Prevent horizontal scrolling issues */
+    transition: transform 0.3s ease-in-out; /* Smooth hiding animation */
 }
+
 .hidden {
     transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
 }
 
-
-/* Change the logo and link colors */
+/* Adjusting navbar links and branding */
 .navbar-brand, .nav-link {
     color: #F2F2F2 !important;
 }
 
-/* Change hover effect for links */
 .nav-link:hover {
     color: #8758FF !important;
     font-weight: bolder;
     border-bottom: 2px solid #8758FF; /* Underline effect */
 }
 
-/* Adjust the padding and margin */
-.navbar .container-fluid {
-    padding: 0 20px;
-}
-
-/* Style the active link */
 .nav-link.active {
     font-weight: bold;
     border-bottom: 2px solid #F2F2F2; /* Underline effect */
+}
+
+.navbar-toggler {
+    color: #000000 !important;
 }
 
 .logo {
@@ -77,9 +71,7 @@ header{
     padding: 20px;
     border-radius: 10px;
 }
-.custom-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
+
 .navbar-toggler{
     color: #000000!important;
 }
@@ -91,9 +83,9 @@ header{
 .hero {
     display: flex;
     width: 100%;
-    height: 110vh;
+    margin-top: 80px;
+    height: 90vh;
     background-color: #000; /* Black background for contrast */
-
 }
 
 /* Content Section */
@@ -365,7 +357,7 @@ grid-template-columns: 1fr 1fr;
 
 #contact-form button:hover {
     background-color: #8758FF;
-    box-shadow: 0 4px 10px rgba(92, 184, 228, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Details */
@@ -446,9 +438,7 @@ footer a img{
 }
 @media screen and (max-width: 768px){
     /* Header */
-    .home-header {
-        height: 5vh;
-    }
+    
 
     /* Hero Section */
     .hero {
@@ -569,7 +559,7 @@ footer a img{
 /* General Section Styling */
 #projects, #certifications {
     padding: 40px 20px;
-    background-color: #F2F2F2;
+    background-color: #000000;
 }
 
 #projects h2, #certifications h2 {
@@ -602,7 +592,7 @@ footer a img{
 
 /* Project Card Styling */
 .project-card, .certification-card {
-    background-color: #FFFFFF;
+    background-color: #000000;
     border: none;
     border-radius: 10px;
     padding: 20px;
@@ -612,7 +602,7 @@ footer a img{
 
 .project-card:hover, .certification-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(135, 88, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-card img {
@@ -630,7 +620,7 @@ footer a img{
 
 .project-info p, .certification-card p {
     font-size: 1rem;
-    color: #555555;
+    color: #F2F2F2;
     margin-bottom: 15px;
 }
 
@@ -676,8 +666,8 @@ footer a img{
 }
 
 #about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+    font-size: 3.5rem;
+    margin-bottom: 60px;
 }
 
 #about h3 {
