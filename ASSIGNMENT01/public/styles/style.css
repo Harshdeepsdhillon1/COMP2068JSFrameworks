@@ -1,6 +1,9 @@
 h1, h2, h3, h4, p, a, li{
     font-family: "Montserrat", sans-serif;
 }
+h1, h2, h3, h4, p, a, li:hover{
+    cursor: default;
+}
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
@@ -11,9 +14,12 @@ body {
     color: #000000; /* Default text color is black */
     scroll-behavior: smooth;
 }
-.home-header{
+header{
     background-color: #FFFFFF;
-    padding-bottom: 0%;
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+
 }
 
 
@@ -21,11 +27,14 @@ body {
 .navbar {
     background-color: #000000!important;
     height: 5em;
-    position: sticky !important;
-    top: 0;
-    z-index: 99;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
 }
-
+.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
 
 
 /* Change the logo and link colors */
@@ -55,6 +64,7 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     color: #F2F2F2;
+    position: relative;
 }
 
 .navbar-brand img {
@@ -81,9 +91,9 @@ body {
 .hero {
     display: flex;
     width: 100%;
-    height: 90vh;
+    height: 110vh;
     background-color: #000; /* Black background for contrast */
-    padding: 20px;
+
 }
 
 /* Content Section */
@@ -447,16 +457,16 @@ footer a img{
     .hero {
         flex-direction: column; /* Stack content vertically */
         align-items: center;
-        padding-top: 40px;
+        padding-top: 20px;
         background-color: #000000;
-        height: 110vh;
+        height: 150vh;
     }
 
     .hero-content {
         width: 100%; /* Adjust width for smaller screens */
         text-align: center; /* Center align text */
         padding: 20px 10px;
-        
+        align-items: center;
     }
 
     .hero p {
@@ -468,7 +478,6 @@ footer a img{
     .hero-content .social-media {
         flex-direction: row; /* Align icons in a row */
         justify-content: center;
-        margin-left: 150px;
         gap: 15px; /* Add spacing between icons */
         margin-bottom: 20px;
     }
@@ -485,7 +494,7 @@ footer a img{
     }
 
     .hero-image img {
-        max-width: 150px;
+        max-width: 240px;
         height: auto;
         border-width: 3px; /* Adjust border thickness */
     }
@@ -659,8 +668,8 @@ footer a img{
 /* About Section */
 #about {
     background-color: #F2F2F2;
-    padding: 50px 0;
-    margin-bottom: 100px;
+    padding-bottom: 40px;
+    padding-top: 120px;  
 }
 
 #about h2, 
@@ -727,7 +736,7 @@ footer a img{
 
 /* Profile Image */
 #about .profile-image img {
-    width: 60%;
+    width: 70%;
     max-width: 100%;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -764,10 +773,12 @@ strong {
     #about .container{
         display: flex;
         flex-direction: column;
+
     }
     #about .row {
         flex-direction: column;
         align-items: center;
+
     }
 
     #about .row:nth-child(3){
