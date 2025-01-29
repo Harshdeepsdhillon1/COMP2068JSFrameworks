@@ -124,8 +124,7 @@ header {
     transition: font-weight 0.5s;
 }
 .hero-text h1:hover{
-    font-weight: 800;
-    font-size: 3.3rem;
+    font-weight: 650;
 }
 
 .hero-text p {
@@ -187,6 +186,7 @@ button a {
     text-align: center;
     background-color: #000000;
     height: 100vh;
+    padding: 0 100px 0 100px;
 }
 
 #skills h2 {
@@ -289,12 +289,11 @@ button a {
     align-items: center;
     background-color: #000000;
     color: #8758FF;
-    padding-bottom: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
+
     align-items: center;
     display: grid;
     grid-template-columns: 1fr;
+    padding: 0 100px 0 100px;
 }
 #contact > div{
 justify-content: center;
@@ -565,7 +564,7 @@ footer a img{
 
 /* General Section Styling */
 #projects, #certifications {
-    padding: 40px 20px;
+    padding: 100px 100px 0 100px;
     background-color: #000000;
 }
 
@@ -662,8 +661,7 @@ footer a img{
 /* About Section */
 #about {
     background-color: #000000;
-    padding-bottom: 40px;
-    padding-top: 120px;  
+    padding: 100px 100px 0 100px;
 }
 
 #about h2, 
