@@ -28,6 +28,7 @@ header {
     z-index: 1000; /* Ensure navbar is on top */
     width: 100%; /* Prevent horizontal scrolling issues */
     transition: transform 0.3s ease-in-out; /* Smooth hiding animation */
+    padding: 0 100px 0 100px !important;
 }
 
 .hidden {
@@ -86,6 +87,7 @@ header {
     margin-top: 80px;
     height: 90vh;
     background-color: #000; /* Black background for contrast */
+    padding: 0 100px 0 100px;
 }
 
 /* Content Section */
@@ -119,6 +121,11 @@ header {
     font-size: 3.2rem;
     color: #F2F2F2;
     margin-bottom: 10px;
+    transition: font-weight 0.5s;
+}
+.hero-text h1:hover{
+    font-weight: 800;
+    font-size: 3.3rem;
 }
 
 .hero-text p {
